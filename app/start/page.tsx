@@ -157,13 +157,15 @@ export default function Start() {
 
   return (
     <>
-      <Nav
-        characters={characters}
-        isBlurred={isBlurred}
-        timer={timer}
-        setTimer={setTimer}
-        gameEnded={gameEnded}
-      />
+      {characters && (
+        <Nav
+          characters={characters}
+          isBlurred={isBlurred}
+          timer={timer}
+          setTimer={setTimer}
+          gameEnded={gameEnded}
+        />
+      )}
       <div
         className={clsx(
           'relative flex h-screen items-start justify-center bg-page-yellow',

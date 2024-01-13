@@ -107,9 +107,11 @@ export default function Nav({
           Pirate
           <span className="text-yellow-400">Hunt</span>
         </a>
-        <div key={'Zoro'} className="ml-5 flex items-center gap-4 px-2">
+        <div className="ml-5 flex items-center gap-4 px-2">
           <CharacterImage
-            src={`/Zoro.png`}
+            src={
+              'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Zoro.png?alt=media&token=cb7648b6-660d-435b-91d5-0c1e81cba135'
+            }
             alt={'Zoro' as string}
             isBlurred={isBlurred['Zoro' as string]}
           />
@@ -118,7 +120,9 @@ export default function Nav({
             isBlurred={isBlurred['Zoro' as string]}
           />
           <CharacterImage
-            src={`/Law.png`}
+            src={
+              'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Law.png?alt=media&token=ea6e57d5-4e71-41da-8338-47baa3349bd8'
+            }
             alt={'Law' as string}
             isBlurred={isBlurred['Law' as string]}
           />
@@ -127,7 +131,9 @@ export default function Nav({
             isBlurred={isBlurred['Law' as string]}
           />
           <CharacterImage
-            src={`/Hancock.png`}
+            src={
+              'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Hancock.png?alt=media&token=115303f5-7fa6-459b-9b81-864cca8f7160'
+            }
             alt={'Hancock' as string}
             isBlurred={isBlurred['Hancock' as string]}
           />

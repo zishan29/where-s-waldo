@@ -84,6 +84,20 @@ const CustomContextMenu: React.FC<CustomContextMenuProps> = ({
 
   const menuPosition: { top: number; left: number } | null = getMenuPosition();
 
+  const getImage = (name: string | null) => {
+    if (name !== null) {
+      if (name === 'Zoro') {
+        return 'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Zoro.png?alt=media&token=cb7648b6-660d-435b-91d5-0c1e81cba135';
+      }
+      if (name === 'Law') {
+        return 'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Law.png?alt=media&token=ea6e57d5-4e71-41da-8338-47baa3349bd8';
+      }
+      if (name === 'Hancock') {
+        return 'https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/Hancock.png?alt=media&token=115303f5-7fa6-459b-9b81-864cca8f7160';
+      }
+    }
+  };
+
   return (
     <>
       {menuState.isOpen && (
@@ -99,7 +113,7 @@ const CustomContextMenu: React.FC<CustomContextMenuProps> = ({
                 className="flex cursor-pointer items-center gap-2 p-4 text-white"
               >
                 <Image
-                  src={`/${item.name}.png`}
+                  src={getImage(item.name) as string}
                   alt={`${item.name}`}
                   width={40}
                   height={40}

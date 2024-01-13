@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, use } from 'react';
-import Image from 'next/image';
 import CustomContextMenu from '../components/CustomMenu';
 import Nav from '../components/Nav';
 import clsx from 'clsx';

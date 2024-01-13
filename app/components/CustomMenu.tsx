@@ -112,12 +112,11 @@ const CustomContextMenu: React.FC<CustomContextMenuProps> = ({
                 onClick={() => handleItemClick(item._id as string)}
                 className="flex cursor-pointer items-center gap-2 p-4 text-white"
               >
-                <Image
+                <img
                   src={getImage(item.name) as string}
                   alt={`${item.name}`}
                   width={40}
                   height={40}
-                  priority
                   className="rounded"
                 />
                 {item.name}

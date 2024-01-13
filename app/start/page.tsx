@@ -171,14 +171,13 @@ export default function Start() {
           { 'brightness-50': gameEnded },
         )}
       >
-        <Image
+        <img
           src="https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/onepiece.png?alt=media&token=4574a1c6-1fc7-4d62-aaa8-fa2ffbf87daf"
           alt=""
           width={2000}
           height={2000}
           className="cursor-crosshair"
           onClick={handleImageClick}
-          priority
         />
       </div>
       <CustomContextMenu

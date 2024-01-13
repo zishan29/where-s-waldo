@@ -22,13 +22,12 @@ export default function Home() {
       </nav>
       <main className="mt-10 flex grow flex-col items-center">
         <div className="flex flex-col items-center gap-4 self-center rounded-md bg-stone-800 p-8 text-white shadow-lg sm:w-full md:w-2/3 lg:w-1/2">
-          <Image
+          <img
             src="https://firebasestorage.googleapis.com/v0/b/where-s-waldo-8e291.appspot.com/o/onepiece.png?alt=media&token=4574a1c6-1fc7-4d62-aaa8-fa2ffbf87daf"
             alt=""
             width={500}
             height={500}
             className="rounded-md"
-            priority
           />
           <div className="text-lg">
             Dive into the vibrant world of One Piece with my exciting

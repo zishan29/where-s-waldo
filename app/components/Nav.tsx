@@ -43,14 +43,7 @@ const CharacterImage = ({
 }: BlurEffectProps & { src: string; alt: string }) => {
   return (
     <div className={`${isBlurred ? 'brightness-50 filter' : ''}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={40}
-        height={40}
-        priority
-        className="rounded"
-      />
+      <img src={src} alt={alt} width={40} height={40} className="rounded" />
     </div>
   );
 };

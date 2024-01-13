@@ -32,7 +32,7 @@ interface NavProps {
   characters: Characters[];
   isBlurred: Record<string, boolean>;
   timer: number;
-  setTimer: (time: number) => void;
+  setTimer: React.Dispatch<React.SetStateAction<number>>;
   gameEnded: boolean;
 }
 

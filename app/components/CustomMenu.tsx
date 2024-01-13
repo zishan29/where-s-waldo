@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import { CSSProperties } from 'react';
 
 interface Characters {
   boundingBox: {
@@ -81,10 +82,15 @@ const CustomContextMenu: React.FC<CustomContextMenuProps> = ({
     return null;
   };
 
+  const menuPosition: { top: number; left: number } | null = getMenuPosition();
+
   return (
     <>
       {menuState.isOpen && (
-        <div className="absolute z-10" style={getMenuPosition()}>
+        <div
+          className="absolute z-10"
+          style={menuPosition ? menuPosition : undefined}
+        >
           <div className="transform rounded-md  bg-stone-900 transition">
             {remainingCharacters.map((item: Characters) => (
               <div

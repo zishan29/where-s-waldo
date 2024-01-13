@@ -18,7 +18,8 @@ export default function LeaderBoards() {
         if (res.ok) {
           let usersRes = await res.json();
           const sortedUsers = usersRes.data.sort(
-            (a, b) => parseFloat(a.time) - parseFloat(b.time),
+            (a: { time: string }, b: { time: string }) =>
+              parseFloat(a.time) - parseFloat(b.time),
           );
           setUsers(sortedUsers);
         }

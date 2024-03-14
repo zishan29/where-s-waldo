@@ -88,7 +88,7 @@ export default function Nav({
     <>
       <nav
         className={clsx(
-          'sticky top-0 z-10 flex h-20 w-screen items-center bg-stone-900 px-8 text-white',
+          'sticky top-0 z-10 hidden h-20 w-screen items-center bg-stone-900 px-8 text-white md:flex',
           { 'brightness-50': gameEnded },
         )}
       >

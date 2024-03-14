@@ -157,6 +157,9 @@ export default function Start() {
 
   return (
     <>
+      <div className="flex h-screen w-screen items-center justify-center bg-stone-900 text-center text-white md:hidden">
+        Please play with bigger screen for better experience
+      </div>
       {characters && (
         <Nav
           characters={characters}
@@ -168,7 +171,7 @@ export default function Start() {
       )}
       <div
         className={clsx(
-          'relative flex h-screen items-start justify-center bg-page-yellow',
+          'relative hidden h-screen items-start justify-center bg-page-yellow md:flex',
           { 'brightness-50': gameEnded },
         )}
       >

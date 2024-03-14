@@ -10,9 +10,11 @@ interface Users {
 
 export default function LeaderBoards() {
   const [users, setUsers] = useState<Users[]>([]);
+  const [loading, setLoading] = useState(false);
   let place = 0;
   useEffect(() => {
     (async () => {
+      setLoading(true);
       try {
         let res = await fetch('https://wheres-waldo-api.adaptable.app/users');
         if (res.ok) {
@@ -25,6 +27,8 @@ export default function LeaderBoards() {
         }
       } catch (err) {
         console.log(err);
+      } finally {
+        setLoading(false);
       }
     })();
   }, []);
@@ -37,10 +41,6 @@ export default function LeaderBoards() {
       year: 'numeric',
     });
   };
-
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
 
   return (
     <>
@@ -67,17 +67,23 @@ export default function LeaderBoards() {
             <div>Time</div>
             <div>Date</div>
           </div>
-          {users.map((user) => (
-            <div
-              key={user._id}
-              className="col-span-4 grid h-max grid-cols-4 p-2 px-4"
-            >
-              <div>{++place}</div>
-              <div>{user.name}</div>
-              <div>{user.time}s</div>
-              <div>{formatDate(user.timeStamp)}</div>
+          {loading ? (
+            <div className="flex h-full items-center justify-center bg-stone-900">
+              loading...
             </div>
-          ))}
+          ) : (
+            users.map((user) => (
+              <div
+                key={user._id}
+                className="col-span-4 grid h-max grid-cols-4 p-2 px-4"
+              >
+                <div>{++place}</div>
+                <div>{user.name}</div>
+                <div>{user.time}s</div>
+                <div>{formatDate(user.timeStamp)}</div>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </>
